@@ -16,8 +16,14 @@ map('n', 'U', '<C-r>', { silent = true, desc = 'Redo' })
 
 -- quickfix list
 map('n', '<leader>q', ':copen<CR>', { silent = true, desc = 'Open quickfix list' })
-map('n', '<C-j>', ':cnext<CR>', { silent = true, desc = 'Next quickfix item' })
-map('n', '<C-k>', ':cprev<CR>', { silent = true, desc = 'Prev quickfix item' })
+map('n', '<leader>j', ':cnext<CR>', { silent = true, desc = 'Next quickfix item' })
+map('n', '<leader>k', ':cprev<CR>', { silent = true, desc = 'Prev quickfix item' })
+
+-- move window shortcuts
+map('n', '<C-h>', '<C-w>h', {desc = 'Window go left' })
+map('n', '<C-j>', '<C-w>j', {desc = 'Window go down' })
+map('n', '<C-k>', '<C-w>k', {desc = 'Window go up' })
+map('n', '<C-l>', '<C-w>l', {desc = 'Window go right' })
 
 -- switch to a new session in tmux
 map('n', '<C-f>', ':!tmux neww tmux-sessionizer<CR><CR>', { silent = true, desc = 'switch to a new session in tmux' })
