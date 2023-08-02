@@ -34,6 +34,11 @@ return {
 
         -- open git repo in browser (requires vim-rhubarb)
         vim.keymap.set('n', '<leader>gb', ':GBrowse<CR>', {desc = '[G]it [B]rowse'})
+
+        -- quit buffer
+        vim.keymap.set('n', 'q', function()
+          vim.cmd('q')
+        end, { buffer = bufnr, desc = '[Q]uit' })
       end,
     })
   end,
