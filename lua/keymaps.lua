@@ -14,6 +14,10 @@ map('v', '<leader>p', '"+p', { silent = true })
 -- Helix inspired redo
 map('n', 'U', '<C-r>', { silent = true, desc = 'Redo' })
 
+-- better indenting
+map('v', '<', '<gv', { silent = true, desc = 'Indent left' })
+map('v', '>', '>gv', { silent = true, desc = 'Indent right' })
+
 -- quickfix list
 map('n', '<leader>q', ':copen<CR>', { silent = true, desc = 'Open quickfix list' })
 map('n', '<leader>j', ':cnext<CR>', { silent = true, desc = 'Next quickfix item' })
