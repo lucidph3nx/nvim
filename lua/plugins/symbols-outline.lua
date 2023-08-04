@@ -22,6 +22,6 @@ return {
     lsp_blacklist = {},
   },
   keys = {
-    { '<leader>o', vim.cmd.SymbolsOutline, desc = '[O]utline' },
+    { '<leader>to', vim.cmd.SymbolsOutline, desc = '[O]utline' },
   },
 }
