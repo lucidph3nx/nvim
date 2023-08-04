@@ -13,6 +13,9 @@ map('v', '<leader>p', '"+p', { silent = true })
 
 -- Helix inspired redo
 map('n', 'U', '<C-r>', { silent = true, desc = 'Redo' })
+-- Helix inspired go left and right
+map('n', 'gh', '0', { silent = true, desc = 'go to start of line' })
+map('n', 'gl', '$', { silent = true, desc = 'go to end of line' })
 
 -- better indenting
 map('v', '<', '<gv', { silent = true, desc = 'Indent left' })
