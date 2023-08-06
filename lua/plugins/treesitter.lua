@@ -36,9 +36,8 @@ return {
       'yaml',
     },
 
-    -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
+    -- Autoinstall languages that are not installed
     auto_install = true,
-
     highlight = {
       enable = true
     },
@@ -46,10 +45,10 @@ return {
     incremental_selection = {
       enable = true,
       keymaps = {
-        init_selection = '<c-space>',
-        node_incremental = '<c-space>',
-        scope_incremental = '<c-s>',
-        node_decremental = '<M-space>',
+        init_selection = '<CR>',
+        scope_incremental = '<CR>',
+        node_incremental = '<TAB>',
+        node_decremental = '<S-TAB>',
       },
     },
     textobjects = {
