@@ -89,7 +89,8 @@ return {
           },
           dictionary = {
             ['en-NZ'] = {
-              'neovim', 'Ness',
+              'neovim',
+              'Ness',
             }
           },
           checkFrequency = 'edit',
