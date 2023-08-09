@@ -1,4 +1,20 @@
 -- multi-purpose search utility and fuzzy finder
+-- shorthand for telescope.builtin
+local t = require('telescope.builtin')
+
+-- picker themes
+local mini_find = function() -- just for local fuzzy
+  return require('telescope.themes').get_dropdown({
+    borderchars = {
+      { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+      prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
+      results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
+      preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+    },
+    previewer = false,
+  })
+end
+
 return {
   'nvim-telescope/telescope.nvim',
   enabled = true,
@@ -15,6 +31,12 @@ return {
           ['<C-u>'] = false,
           ['<C-d>'] = false,
         },
+      },
+      borderchars = {
+        { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        prompt = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        results = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
       },
     },
     pickers = {
@@ -41,12 +63,7 @@ return {
     {
       -- current buffer fuzzy should have a different theme
       '<leader>/',
-      function()
-        require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({
-          winblend = 10,
-          previewer = false,
-        }))
-      end,
+      function() t.current_buffer_fuzzy_find(mini_find()) end,
       desc = '[/] Fuzzily search in current buffer'
     },
   },
