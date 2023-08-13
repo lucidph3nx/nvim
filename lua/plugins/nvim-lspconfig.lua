@@ -70,7 +70,29 @@ return {
     --  define the property 'filetypes' to the map in question.
     local servers = {
       gopls = {},
-      pyright = {},
+      pylsp = {
+        pylsp = {
+          filetypes = { 'python' },
+          configurationSources = { 'flake8' },
+          plugins = {
+            pylint = {
+              enabled = true,
+            },
+            flake8 = {
+              maxLineLength = 100,
+            },
+            pyflakes = {
+              enabled = false,
+            },
+            pycodestyle = {
+              enabled = false,
+            },
+            rope_completion = {
+              enabled = true,
+            },
+          },
+        },
+      },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       clojure_lsp = {},
       sqlls = {},
