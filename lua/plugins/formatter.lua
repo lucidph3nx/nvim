@@ -18,6 +18,10 @@ return {
         javascriptreact = prettier,
         typescript = prettier,
         typescriptreact = prettier,
+        css = prettier,
+        ['*'] = {
+          require("formatter.filetypes.any").remove_trailing_whitespace
+        }
       },
     })
   end
