@@ -17,10 +17,6 @@ map('n', 'U', '<C-r>', { silent = true, desc = 'Redo' })
 map('n', 'gh', '0', { silent = true, desc = 'go to start of line' })
 map('n', 'gl', '$', { silent = true, desc = 'go to end of line' })
 
--- better indenting
-map('v', '<', '<gv', { silent = true, desc = 'Indent left' })
-map('v', '>', '>gv', { silent = true, desc = 'Indent right' })
-
 -- quickfix list
 map('n', '<leader>q', ':copen<CR>', { silent = true, desc = 'Open quickfix list' })
 map('n', '<leader>j', ':cnext<CR>', { silent = true, desc = 'Next quickfix item' })
