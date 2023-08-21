@@ -131,6 +131,9 @@ return {
           keyOrdering = false,
         },
       },
+      helm_ls = {
+        filetypes = { 'helm '}
+      }
     }
 
     -- Setup neovim lua configuration
