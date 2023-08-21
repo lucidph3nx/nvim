@@ -41,6 +41,7 @@ set.hlsearch = true
 set.termguicolors = true
 -- keep signcolumn always visible
 set.signcolumn = 'yes'
+set.showmode = false -- I use lualine and don't need to see the mode twice
 
 -- when splitting, open new window below/right
 set.splitright = true
