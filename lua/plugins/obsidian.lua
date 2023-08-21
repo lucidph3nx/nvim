@@ -11,6 +11,7 @@ return {
     { '<leader>oo', vim.cmd.ObsidianOpen,      desc = '[O]bsidian [O]pen' },
     { '<leader>ot', vim.cmd.ObsidianTemplate,  desc = '[O]bsidian [T]emplate' },
     { '<leader>on', vim.cmd.ObsidianNew,  desc = '[O]bsidian [N]ew' },
+    { '<leader>of', vim.cmd.ObsidianFollowLink,  desc = '[O]bsidian [F]ollow Link' },
   },
   opts = {
     dir = '~/documents/obsidian/personal-vault',
@@ -26,6 +27,7 @@ return {
       nvim_cmp = true,
       new_notes_location = 'notes_subdir',
     },
+    open_app_foreground = true,
     disable_frontmatter = true,
     mappings = {},
   },
