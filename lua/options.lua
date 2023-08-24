@@ -11,6 +11,8 @@ set.relativenumber = true
 -- highlight the line of a cursor
 set.cursorline = true
 
+set.timeoutlen = 1000
+
 -- tab definitions
 set.tabstop = 2
 set.shiftwidth = 2
