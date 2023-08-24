@@ -6,8 +6,8 @@ return {
   keys = {
     { '<leader>gs', vim.cmd.Git,            desc = '[G]it [S]tatus in Fugitive' },
     -- a couple keymaps for merge conflicts
-    { '<leader>gh',         '<cmd>diffget //2<CR>', desc = '[G]it, left side of merge diff' },
-    { '<leader>gl',         '<cmd>diffget //2<CR>', desc = '[G]it, right side of merge diff' },
+    { '<leader>gh', '<cmd>diffget //2<CR>', desc = '[G]it, left side of merge diff' },
+    { '<leader>gl', '<cmd>diffget //2<CR>', desc = '[G]it, right side of merge diff' },
   },
   config = function()
     -- autocommand to set keybindings only in fugitive buffers
@@ -33,12 +33,24 @@ return {
         end, { buffer = bufnr, desc = '[P]ull with rebase' })
 
         -- open git repo in browser (requires vim-rhubarb)
-        vim.keymap.set('n', '<leader>gb', ':GBrowse<CR>', {desc = '[G]it [B]rowse'})
+        vim.keymap.set('n', '<leader>gb', ':GBrowse<CR>', { desc = '[G]it [B]rowse' })
 
         -- quit buffer
         vim.keymap.set('n', 'q', function()
           vim.cmd('q')
         end, { buffer = bufnr, desc = '[Q]uit' })
+      end,
+    })
+    -- warn about unsaved buffers on opening fugitive
+    vim.api.nvim_create_autocmd('BufRead', {
+      group = augroup,
+      pattern = '*',
+      callback = function()
+        for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+          if vim.api.nvim_buf_get_option(bufnr, 'modified') then
+            vim.notify('You have unsaved buffers!', vim.log.levels.WARN, { title = 'Fugitive' })
+          end
+        end
       end,
     })
   end,
