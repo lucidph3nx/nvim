@@ -11,8 +11,6 @@ set.relativenumber = true
 -- highlight the line of a cursor
 set.cursorline = true
 
-set.timeoutlen = 1000
-
 -- tab definitions
 set.tabstop = 2
 set.shiftwidth = 2
@@ -52,7 +50,7 @@ set.scrolloff = 8
 
 -- decrease update time
 set.updatetime = 250
-set.timeoutlen = 300
+set.timeoutlen = 1000
 
 set.completeopt = 'menuone,noselect'
 
