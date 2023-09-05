@@ -12,6 +12,9 @@ return {
 
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
+
+    -- Scala metals
+    { 'scalameta/nvim-metals', dependencies = { 'nvim-lua/plenary.nvim' } }
   },
   config = function()
     -- [[ Configure LSP ]]
@@ -132,7 +135,7 @@ return {
         },
       },
       helm_ls = {
-        filetypes = { 'helm '}
+        filetypes = { 'helm ' }
       }
     }
 
@@ -160,5 +163,23 @@ return {
         }
       end
     }
+
+    -- just scala metals
+    require('lspconfig')['metals'].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {},
+      filetypes = { 'scala', 'sbt', 'java' },
+    }
+
+    -- disable semantic tokens for metals
+    vim.api.nvim_create_autocmd("LspAttach", {
+      callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client.name == "metals" then
+          client.server_capabilities.semanticTokensProvider = nil
+        end
+      end,
+    })
   end,
 }
