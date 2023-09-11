@@ -1,4 +1,3 @@
--- best theme ever
 return {
   'navarasu/onedark.nvim',
   cond = 'atom_one_dark' == vim.fn.system('cli.system.getColourScheme'),

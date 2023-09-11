@@ -1,4 +1,3 @@
--- best theme ever
 return {
   'neanias/everforest-nvim',
   cond = 'everforest_dark' == vim.fn.system('cli.system.getColourScheme'),
