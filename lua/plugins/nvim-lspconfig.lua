@@ -114,8 +114,14 @@ return {
           },
           dictionary = {
             ['en-NZ'] = {
+              'firefox',
+              'k9s',
               'neovim',
+              'nvim',
               'Ness',
+              'qutebrowser',
+              'rofi',
+              'tmux',
             }
           },
           checkFrequency = 'edit',
