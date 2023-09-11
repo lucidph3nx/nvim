@@ -43,25 +43,3 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
-
--- Function to set the theme in nvim
-local function setTheme()
-    local theme = vim.fn.system('cli.system.getColourScheme')
-    if theme == 'atom_one_dark' then
-        vim.cmd('colorscheme onedark')
-    end
-    if theme == 'everforest_dark' then
-        vim.cmd('colorscheme everforest')
-    end
-end
-
--- Set the theme on startup
-setTheme()
-
--- Set the theme
-vim.api.nvim_create_autocmd({ 'CursorHold' }, {
-  group = augroup("auto_theme"),
-    callback = function()
-        setTheme()
-    end,
-})
