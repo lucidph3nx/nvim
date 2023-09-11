@@ -29,7 +29,7 @@ map('n', '<C-k>', '<C-w>k', {desc = 'Window go up' })
 map('n', '<C-l>', '<C-w>l', {desc = 'Window go right' })
 
 -- switch to a new session in tmux
-map('n', '<C-f>', ':!tmux neww tmux-sessionizer<CR><CR>', { silent = true, desc = 'switch to a new session in tmux' })
+map('n', '<C-f>', ':!tmux neww cli.tmux.projectSessioniser<CR><CR>', { silent = true, desc = 'switch to a new session in tmux' })
 
 -- keeping these but I don't like how they work, commented out for now
 -- start a replace with current word
