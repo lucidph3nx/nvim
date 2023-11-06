@@ -1,6 +1,5 @@
 return {
-  -- 'neanias/everforest-nvim',
-  'lucidph3nx/everforest-nvim',
+  'neanias/everforest-nvim',
   cond = function()
     if 'everforest_light' == vim.fn.system('cli.system.getColourScheme') then
       return true;
