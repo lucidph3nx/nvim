@@ -11,6 +11,9 @@ set.relativenumber = true
 -- highlight the line of a cursor
 set.cursorline = true
 
+-- spellcheck language
+set.spelllang = 'en_nz,mi'
+
 -- tab definitions
 set.tabstop = 2
 set.shiftwidth = 2

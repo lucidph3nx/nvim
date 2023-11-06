@@ -106,29 +106,29 @@ return {
       rust_analyzer = {},
       tsserver = {},
       eslint = {},
-      ltex = {
-        ltex = {
-          language = 'en-NZ',
-          additionalRules = {
-            enablePickyRules = false,
-          },
-          dictionary = {
-            ['en-NZ'] = {
-              'firefox',
-              'k9s',
-              'neovim',
-              'nvim',
-              'Ness',
-              'qutebrowser',
-              'rofi',
-              'tmux',
-            }
-          },
-          checkFrequency = 'edit',
-          hiddenFalsePositives = {},
-          hiddenTruePositives = {},
-        }
-      },
+      -- ltex = {
+      --   ltex = {
+      --     language = 'en-NZ',
+      --     additionalRules = {
+      --       enablePickyRules = false,
+      --     },
+      --     dictionary = {
+      --       ['en-NZ'] = {
+      --         'firefox',
+      --         'k9s',
+      --         'neovim',
+      --         'nvim',
+      --         'Ness',
+      --         'qutebrowser',
+      --         'rofi',
+      --         'tmux',
+      --       }
+      --     },
+      --     checkFrequency = 'edit',
+      --     hiddenFalsePositives = {},
+      --     hiddenTruePositives = {},
+      --   }
+      -- },
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
