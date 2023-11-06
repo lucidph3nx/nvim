@@ -1,5 +1,6 @@
 return {
-  'neanias/everforest-nvim',
+  -- 'neanias/everforest-nvim',
+  'lucidph3nx/everforest-nvim',
   cond = function()
     if 'everforest_light' == vim.fn.system('cli.system.getColourScheme') then
       return true;
@@ -9,6 +10,16 @@ return {
     end;
     return false
   end,
+  opts = {
+    on_highlights = function(hl, palette)
+      -- markdown links are underlined
+      hl.TSTextReference = {
+        fg = palette.aqua,
+        bg = palette.none,
+        underline = true,
+      }
+    end
+  },
   version = false,
   lazy = false,
   priority = 1000, -- make sure to load this before all the other start plugins
