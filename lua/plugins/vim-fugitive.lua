@@ -27,6 +27,11 @@ return {
           vim.cmd.Git('push')
         end, { buffer = bufnr, desc = '[P]ush' })
 
+        -- keymap for git fetch
+        vim.keymap.set("n", "<leader>f", function()
+          vim.cmd.Git('fetch')
+        end, { buffer = bufnr, desc = '[F]etch' })
+
         -- keymap for git pull with rebase
         vim.keymap.set("n", "<leader>P", function()
           vim.cmd.Git('pull --rebase')
