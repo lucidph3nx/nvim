@@ -27,6 +27,7 @@ set.breakindent = true
 
 -- wrap disabled by default (keybind to toggle)
 set.wrap = false
+set.linebreak = true
 
 -- save undo history
 set.undofile = true
