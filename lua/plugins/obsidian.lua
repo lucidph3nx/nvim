@@ -30,7 +30,7 @@ return {
     completion = {
       nvim_cmp = true,
       new_notes_location = 'notes_subdir',
-      prepend_note_id = false,
+      prepend_note_id = true
     },
     open_app_foreground = true,
     disable_frontmatter = true,
