@@ -16,10 +16,14 @@ return {
   },
   opts = {
     dir = '~/documents/obsidian/personal-vault',
+    note_id_func = function(title)
+      return title
+    end,
     notes_subdir = 'notes',
     daily_notes = {
       folder = 'dailies',
       date_format = '%Y-%m-%d',
+      template = 'daily_note.md',
     },
     templates = {
       subdir = 'templates',
@@ -40,21 +44,6 @@ return {
     require('obsidian').setup(opts)
     -- autocmds
     local augroup = vim.api.nvim_create_augroup('lucidph3nx_obsidian', {})
-    vim.api.nvim_create_autocmd('BufEnter', {
-      group = augroup,
-      pattern = '*.md',
-      callback = function()
-        local bufnr = vim.api.nvim_get_current_buf()
-        local buffer_content = vim.api.nvim_buf_get_lines(bufnr, 0, 1, false)
-        -- Check if the buffer content matches the default line format
-        if #buffer_content > 0 and buffer_content[1]:match('^# %w+ %d+, %d+$') then
-          -- Delete the default line
-          vim.api.nvim_buf_set_lines(bufnr, 0, 1, false, {})
-          -- Run ObsidianTemplate command
-          vim.cmd('ObsidianTemplate daily_note.md')
-        end
-      end,
-    })
     -- autocommand to set keybindings only in obsidian backlinks buffer
     vim.api.nvim_create_autocmd('FileType', {
       group = augroup,
