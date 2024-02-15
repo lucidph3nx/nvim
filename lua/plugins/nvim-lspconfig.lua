@@ -142,6 +142,9 @@ return {
       },
       helm_ls = {
         filetypes = { 'helm ' }
+      },
+      nil_ls = {
+        filetypes = { 'nix' },
       }
     }
 
