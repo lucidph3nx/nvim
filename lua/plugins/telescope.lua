@@ -1,7 +1,3 @@
--- multi-purpose search utility and fuzzy finder
--- shorthand for telescope.builtin
-local t = require('telescope.builtin')
-
 -- picker themes
 local mini_find = function() -- just for local fuzzy
   return require('telescope.themes').get_dropdown({
@@ -63,7 +59,7 @@ return {
     {
       -- current buffer fuzzy should have a different theme
       '<leader>/',
-      function() t.current_buffer_fuzzy_find(mini_find()) end,
+      function() require('telescope.builtin').current_buffer_fuzzy_find(mini_find()) end,
       desc = '[/] Fuzzily search in current buffer'
     },
   },
