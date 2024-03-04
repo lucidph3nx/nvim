@@ -12,7 +12,7 @@ return {
   -- },
   opts = {
     panel = {
-      enabled = false, -- testing out copilot-cmp
+      enabled = true,
       auto_refresh = false,
       layout = {
         position = "bottom", -- | top | left | right
@@ -23,7 +23,7 @@ return {
       },
     },
     suggestion = {
-      enabled = false, -- testing out copilot-cmp
+      enabled = true,
       auto_trigger = true,
       debounce = 75,
       keymap = {
