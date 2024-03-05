@@ -12,7 +12,7 @@ return {
   -- },
   opts = {
     panel = {
-      enabled = true,
+      enabled = false, -- disabled due to the keymap affecting insert mode
       auto_refresh = false,
       layout = {
         position = "bottom", -- | top | left | right
