@@ -31,11 +31,16 @@ return {
     follow_url_func = function(url)
       vim.fn.jobstart({"xdg-open", url})
     end,
-    completion = {
-      nvim_cmp = true,
-      new_notes_location = 'notes_subdir',
-      prepend_note_id = true
-    },
+    new_notes_location = 'notes_subdir',
+    wiki_link_func = function(opts)
+      if opts.id == nil then
+        return string.format("[[%s]]", opts.label)
+      elseif opts.label ~= opts.id then
+        return string.format("[[%s|%s]]", opts.id, opts.label)
+      else
+        return string.format("[[%s]]", opts.id)
+      end
+    end,
     open_app_foreground = true,
     disable_frontmatter = true,
     mappings = {},
