@@ -52,7 +52,7 @@ return {
     { '<leader>sh', ':Telescope help_tags<CR>',   desc = '[S]earch [H]elp' },
     { '<leader>sw', ':Telescope grep_string<CR>', desc = '[S]earch [W]ord' },
     { '<leader>sg', ':Telescope live_grep<CR>',   desc = '[S]earch [G]rep' },
-    { '<leader>sd', ':Telescope diagnostice<CR>', desc = '[S]earch [D]iagnostics' },
+    { '<leader>sd', ':Telescope diagnostics<CR>', desc = '[S]earch [D]iagnostics' },
     { '<leader>sk', ':Telescope keymaps<CR>',     desc = '[S]earch [K]eymaps' },
     { '<leader>sb', ':Telescope buffers<CR>',     desc = '[S]earch [B]uffers' },
     { '<leader>sj', ':Telescope jumplist<CR>',    desc = '[S]earch [J]umplist' },
