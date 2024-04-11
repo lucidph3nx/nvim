@@ -1,6 +1,6 @@
 return {
   'stevearc/conform.nvim',
-  event = { "BufWritePre" },
+  -- event = { "BufWritePre" },
   cmd = { "ConformInfo" },
   keys = {
     {
@@ -12,5 +12,12 @@ return {
       mode = "",
       desc = "Format buffer",
     },
+  },
+  opts = {
+    formatters_by_ft = {
+      lua = { "stylua" },
+      python = { "black" },
+      nix = { "alejandra" },
+    }
   },
 }
