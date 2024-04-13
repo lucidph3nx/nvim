@@ -8,9 +8,9 @@ return {
     local t = ls.text_node
     local d = ls.dynamic_node
     -- my snippets
-    ls.add_snippets("markdown", {
-      s("[] ", { t("- [ ] ") })
-    })
+    -- ls.add_snippets("markdown", {
+    --   s("[] ", { t("- [ ] ") })
+    -- })
     ls.add_snippets("markdown", {
       s("wikidate", d(1, function (args, parent)
       local env = parent.snippet.env
