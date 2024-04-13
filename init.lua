@@ -4,6 +4,8 @@
 require('keymaps')
 -- load general vim options
 require('options')
+-- load abbreviations
+require('abbreviations')
 
 -- Bootstrap lazy.nvim package manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
