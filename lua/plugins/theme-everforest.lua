@@ -1,22 +1,5 @@
 return {
   'neanias/everforest-nvim',
-  -- cond = function()
-  --   local function is_command_on_path(command)
-  --     local output = vim.fn.executable(command)
-  --     return output == 1
-  --   end
-  --   if 'everforest_light' == vim.fn.system('cli.system.getColourScheme') then
-  --     return true;
-  --   end;
-  --   if 'everforest_dark' == vim.fn.system('cli.system.getColourScheme') then
-  --     return true;
-  --   end;
-  --   -- also the default, if it cant find the script
-  --   if not is_command_on_path('cli.system.getColourScheme') then
-  --     return true;
-  --   end;
-  --   return false
-  -- end,
   opts = {
     on_highlights = function(hl, palette)
       -- markdown links are underlined
