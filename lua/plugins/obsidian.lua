@@ -28,7 +28,6 @@ return {
     { '<leader>ob', vim.cmd.ObsidianBacklink,   desc = '[O]bsidian show [B]acklinks' },
   },
   opts = {
-    -- dir = '~/documents/obsidian/personal-vault',
     workspaces = {
       {
         name = "personal",
