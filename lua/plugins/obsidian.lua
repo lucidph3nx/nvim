@@ -7,7 +7,20 @@ return {
   },
   keys = {
     { '<leader>od', vim.cmd.ObsidianToday,      desc = '[O]bsidian [D]aily note for Today' },
-    { '<leader>oy', vim.cmd.ObsidianYesterday,  desc = '[O]bsidian [Y]esterday' },
+    {
+      '<leader>oy',
+      function()
+        vim.cmd("ObsidianToday -1")
+      end,
+      desc = '[O]bsidian [Y]esterday'
+    },
+    {
+      '<leader>or',
+      function()
+        vim.cmd("ObsidianDailies -30 1")
+      end,
+      desc = '[O]bsidian [R]ecent]'
+    },
     { '<leader>oo', vim.cmd.ObsidianOpen,       desc = '[O]bsidian [O]pen' },
     { '<leader>ot', vim.cmd.ObsidianTemplate,   desc = '[O]bsidian [T]emplate' },
     { '<leader>on', vim.cmd.ObsidianNew,        desc = '[O]bsidian [N]ew' },
@@ -15,7 +28,13 @@ return {
     { '<leader>ob', vim.cmd.ObsidianBacklink,   desc = '[O]bsidian show [B]acklinks' },
   },
   opts = {
-    dir = '~/documents/obsidian/personal-vault',
+    -- dir = '~/documents/obsidian/personal-vault',
+    workspaces = {
+      {
+        name = "personal",
+        path = '~/documents/obsidian/personal-vault',
+      },
+    },
     note_id_func = function(title)
       return title
     end,
