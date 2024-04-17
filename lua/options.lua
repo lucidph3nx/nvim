@@ -55,6 +55,7 @@ set.scrolloff = 8
 -- decrease update time
 set.updatetime = 250
 set.timeoutlen = 1000
+set.lazyredraw = true
 
 set.completeopt = 'menuone,noselect'
 
