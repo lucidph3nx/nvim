@@ -35,7 +35,8 @@ return {
       },
     },
     note_id_func = function(title)
-      return title
+      -- lowercase and replace spaces with underscores
+      return string.lower(title:gsub("%s", "_"))
     end,
     notes_subdir = 'notes',
     daily_notes = {
@@ -65,6 +66,8 @@ return {
   },
   config = function(_, opts)
     require('obsidian').setup(opts)
+    -- markdown conceal
+    vim.opt.conceallevel = 2
     -- autocmds
     local augroup = vim.api.nvim_create_augroup('lucidph3nx_obsidian', {})
     -- autocommand to set keybindings only in obsidian backlinks buffer

@@ -7,7 +7,7 @@ return {
     { '<leader>gs', vim.cmd.Git,            desc = '[G]it [S]tatus in Fugitive' },
     -- a couple keymaps for merge conflicts
     { '<leader>gh', '<cmd>diffget //2<CR>', desc = '[G]it, left side of merge diff' },
-    { '<leader>gl', '<cmd>diffget //2<CR>', desc = '[G]it, right side of merge diff' },
+    { '<leader>gl', '<cmd>diffget //3<CR>', desc = '[G]it, right side of merge diff' },
   },
   config = function()
     -- autocommand to set keybindings only in fugitive buffers
